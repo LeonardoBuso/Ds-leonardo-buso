@@ -6,13 +6,15 @@ package exercíciosaulajava;
 
 /**
  *
- * @author CAMARGO
+ * @author Usuário
  */
-public class Exercício4 {
+public class Exercicio6 {
     public static void main(String[] args) {
-        int base = 5;
-        int lado = 10;
-        int area = base*lado/2;
-        System.out.println("A área é:"+area);
+    float preço = (float) 20.00;
+    int distancia = 1000;
+    float consumo = (float) 10.5;
+    float ValorGasto = preço*distancia/consumo;
+        System.out.println("O custo foi de "+ValorGasto);
+    
     }
 }

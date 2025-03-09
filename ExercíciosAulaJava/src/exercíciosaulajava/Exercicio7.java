@@ -6,13 +6,12 @@ package exercíciosaulajava;
 
 /**
  *
- * @author CAMARGO
+ * @author Usuário
  */
-public class Exercício4 {
+public class Exercicio7 {
     public static void main(String[] args) {
-        int base = 5;
-        int lado = 10;
-        int area = base*lado/2;
-        System.out.println("A área é:"+area);
+        int valor1 = 10;
+        int antecessor = valor1 -1;
+        System.out.println("O antecessor é "+antecessor);
     }
 }
