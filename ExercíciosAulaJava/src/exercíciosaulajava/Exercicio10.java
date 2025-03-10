@@ -10,10 +10,10 @@ package exercíciosaulajava;
  */
 public class Exercicio10 {
      public static void main(String[] args) {
-     int Salario = 20000;
-     int SalarioReajustado = 25000;
-     float PorcentagemReajuste = (SalarioReajustado*100/Salario)/100;
-         System.out.println("A porcentagem de reajuste foi de:"+PorcentagemReajuste);
+     float Salario = 20000f;
+     float Reajuste = 1.25f;
+     float NovoSalario = Salario*Reajuste;
+         System.out.println("Novo salario e de: " +NovoSalario);
      
      }
 }
