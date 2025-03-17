@@ -14,18 +14,19 @@ public class Exercicio14
     {
         Scanner teclado = new Scanner (System.in);
         System.out.println("Entre com o seu nome");
-        float Nome = teclado.nextInt();
+        String Nome = teclado.nextLine();
         System.out.println("Entre com a sua altura");
         float Altura = teclado.nextInt();
         System.out.println("Entre com seu sexo M ou F");
-        float PesoIdeal = (72.7*+Altura)-58;
-        float 'm'
-        float Sexo = teclado.nextFloat();
-        
-        if (Sexo == 'M') 
-                {
-
-                }
+        String Sexo = teclado.nextLine();
+        float PesoIdealM = (72.7f * Altura/100)-58;
+        float PesoIdealF = (62.1f * Altura/100)-44.7f;
+        if (Sexo == "M" || Sexo == "m"){
+            System.out.println("Seu peso ideal é "+PesoIdealM);
+        }
+        else{
+            System.out.println("Seu peso ideal é "+PesoIdealF);
+        }
     }
     
 }
