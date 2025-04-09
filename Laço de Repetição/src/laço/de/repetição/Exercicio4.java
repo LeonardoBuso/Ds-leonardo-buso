@@ -6,13 +6,12 @@ package laço.de.repetição;
 
 /**
  *
- * @author CAMARGO
+ * @author Usuário
  */
-public class Exercicio3 {
+public class Exercicio4 {
     public static void main (String[] args) {
-    int numero = 0;
-    for (int i = numero; i <= 10; i++){
-            System.out.println("Os números em ordem crescente são:\n"+i);
+    for (int i = 10; i >= 1; i--){
+            System.out.println("Os números em ordem decrescente são:\n"+i);
         }
     }
 }
