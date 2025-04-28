@@ -8,18 +8,8 @@ package vetores;
  *
  * @author CAMARGO
  */
-public class Exercício2 {
+public class Exercício5 {
     public static void main(String[] args){
-    int number[] = {2,2,2,2,2,2,2,2,2,2};
-    int soma = 0;
-    int i;
-    
-    for (i = 0; i < number.length; i++) {
-        soma += number[i];
-    }
-    
-        System.out.println("A soma é: " +soma);
-    
-    
-    }
+    int numeros[] = {2,3,4,5,6,7}; 
+   }
 }
