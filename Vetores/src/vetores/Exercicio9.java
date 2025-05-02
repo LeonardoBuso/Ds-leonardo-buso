@@ -4,22 +4,16 @@
  */
 package vetores;
 
-
-public class Exercício5 {
+public class Exercicio9 {
     public static void main(String[] args) {
-        int[] numeros = {1, 4, 3, 6, 7, 8, 9, 2, 5, 10};
-        int pares = 0, impares = 0;
+        int[] numeros = {10, 15, 3, 7, 22, 8, 14, 2, 30, 6};
+        int valor = 10;
 
         for (int num : numeros) {
-            if (num % 2 == 0) {
-                pares++;
-            } else {
-                impares++;
+            if (num > valor) {
+                System.out.println(num);
             }
         }
-
-        System.out.println("Pares: " + pares);
-        System.out.println("Ímpares: " + impares);
     }
 }
 
