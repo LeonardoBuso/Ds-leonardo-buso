@@ -10,10 +10,11 @@ package segundoexemplopoo;
  */
 public class Main {
     public static void main(String[] args) {
-        Roupas camiseta = new Camisetas("Nike", 50.00, "M");
-        Roupas calca = new Calças("Nike", 100.00, "M");
-        Roupas blusa = new Blusas_de_Frio("Nike", 200.00, "M");
-        Roupas meias = new Meias("Nike", 30.00, "M");
+        Camisetas Camisetas = new Camisetas("Nike", 50.00, "M");
+        Calças Calças = new Calças("Nike", 100.00, "M");
+        Blusas_de_Frio Blusas_de_Frio = new Blusas_de_Frio("Nike", 200.00, "M");
+        Meias Meias = new Meias("Nike", 30.00, "M");
+        
         Camisetas.exibirDetalhes();
         Calças.exibirDetalhes();
         Blusas_de_Frio.exibirDetalhes();

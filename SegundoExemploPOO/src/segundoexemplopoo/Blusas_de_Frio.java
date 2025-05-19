@@ -22,6 +22,7 @@ public class Blusas_de_Frio extends Roupas {
     
     public void setmodelagem(String modelagem){
         this.modelagem = "Moletom";
+    }
     
     public String getcor(){
         return cor;
@@ -30,6 +31,8 @@ public class Blusas_de_Frio extends Roupas {
     public void setcor(String cor){
         this.cor = "Cinza";
     }
+    
+    @Override
       public void exibirDetalhes() {
         super.exibirDetalhes();
         System.out.println("A cor da Blusa de frio é: " + cor);

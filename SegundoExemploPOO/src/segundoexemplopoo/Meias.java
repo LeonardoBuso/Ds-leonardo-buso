@@ -31,6 +31,7 @@ public class Meias extends Roupas {
     public void setcor(String cor){
         this.cor = "Preta";
     }
+    @Override
       public void exibirDetalhes() {
         super.exibirDetalhes();
         System.out.println("A cor da meia é: " + cor);

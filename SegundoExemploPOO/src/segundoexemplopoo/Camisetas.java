@@ -31,6 +31,7 @@ public class Camisetas extends Roupas {
     public void setcor(String cor){
         this.cor = "Azul";
     }
+    @Override
     public void exibirDetalhes() {
         super.exibirDetalhes();
         System.out.println("A cor da camiseta é: " + cor);

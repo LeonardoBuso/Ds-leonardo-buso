@@ -31,6 +31,7 @@ public class Calças extends Roupas {
     public void setmodelagem(String modelagem){
         this.modelagem = "Cargo";
     }
+    @Override
       public void exibirDetalhes() {
         super.exibirDetalhes();
         System.out.println("A cor da calça é: " + cor);
