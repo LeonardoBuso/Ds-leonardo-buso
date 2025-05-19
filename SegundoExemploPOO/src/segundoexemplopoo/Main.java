@@ -15,7 +15,7 @@ public class Main {
         Roupas calca = new Calças("Nike", 100.00, "M");
         Roupas blusa = new Blusas_de_Frio("Nike", 200.00, "M");
         Roupas meias = new Meias("Nike", 30.00, "M");
-        
+        Camisetas.exibirDetalhes();
         
     }
 }
