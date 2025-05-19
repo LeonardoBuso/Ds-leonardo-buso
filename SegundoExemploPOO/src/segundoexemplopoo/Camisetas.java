@@ -20,8 +20,8 @@ public class Camisetas extends Roupas {
         return modelagem;
     }
     
-    public void setmodelagem(String tipo){
-        this.modelagem = tipo;
+    public void setmodelagem(String modelagem){
+        this.modelagem = "Moletom";
     }
     
     public String getcor(){
@@ -29,7 +29,7 @@ public class Camisetas extends Roupas {
     }
     
     public void setcor(String cor){
-        this.cor = cor;
+        this.cor = "Azul";
     }
     public void exibirDetalhes() {
         System.out.println("A cor da camiseta é: " + cor);
