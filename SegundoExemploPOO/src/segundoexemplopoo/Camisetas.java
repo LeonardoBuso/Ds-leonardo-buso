@@ -13,7 +13,7 @@ public class Camisetas extends Roupas {
     private String cor;
     
     public Camisetas(String marca, double valor, String tamanho) {
-        super(marca, valor, tamanho);
+        super(marca, valor, tamanho);        
     }
     
     public String getmodelagem(){
@@ -30,5 +30,10 @@ public class Camisetas extends Roupas {
     
     public void setcor(String cor){
         this.cor = "Azul";
+    }
+    public void exibirDetalhes() {
+        super.exibirDetalhes();
+        System.out.println("A cor da camiseta é: " + cor);
+        System.out.println("A modelagem é: " + modelagem);
     }
 }
