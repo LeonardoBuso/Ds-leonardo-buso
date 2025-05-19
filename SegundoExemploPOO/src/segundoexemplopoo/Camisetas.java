@@ -32,6 +32,7 @@ public class Camisetas extends Roupas {
         this.cor = "Azul";
     }
     public void exibirDetalhes() {
+        System.out.println("")
         System.out.println("A cor da camiseta é: " + cor);
         System.out.println("A modelagem é: " + modelagem);
     }
