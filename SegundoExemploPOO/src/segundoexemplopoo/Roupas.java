@@ -49,7 +49,11 @@ public class Roupas {
     public void comprar(){
         System.out.println("A pessoa comprou");
     }
-    
+    public void exibirDetalhes() {
+        System.out.println("A marca é: " + marca + "O valor é: " + valor + "O tamanho é: " + tamanho);
+        System.out.println("A cor da é: " + cor);
+        System.out.println("A modelagem é: " + modelagem);
+    }
 
 }
 
