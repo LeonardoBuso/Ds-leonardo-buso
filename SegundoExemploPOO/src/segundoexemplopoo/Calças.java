@@ -21,7 +21,7 @@ public class Calças extends Roupas {
     }
     
     public void setcor(String cor){
-        this.cor = cor;
+        this.cor = "Verde Musgo";
     }
     
     public String getmodelagem(){
@@ -29,8 +29,12 @@ public class Calças extends Roupas {
     }
     
     public void setmodelagem(String modelagem){
-        this.modelagem = modelagem;
+        this.modelagem = "Cargo";
     }
-    
+      public void exibirDetalhes() {
+        super.exibirDetalhes();
+        System.out.println("A cor da calça é: " + cor);
+        System.out.println("A modelagem é: " + modelagem);
+    }
 
 }
