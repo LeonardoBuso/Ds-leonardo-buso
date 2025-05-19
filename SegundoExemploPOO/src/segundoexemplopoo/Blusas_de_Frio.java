@@ -21,15 +21,18 @@ public class Blusas_de_Frio extends Roupas {
     }
     
     public void setmodelagem(String modelagem){
-        this.modelagem = modelagem;
-    }
+        this.modelagem = "Moletom";
     
     public String getcor(){
         return cor;
     }
     
     public void setcor(String cor){
-        this.cor = cor;
+        this.cor = "Cinza";
     }
-    
+      public void exibirDetalhes() {
+        super.exibirDetalhes();
+        System.out.println("A cor da Blusa de frio é: " + cor);
+        System.out.println("A modelagem é: " + modelagem);
+    }
 }
