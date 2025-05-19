@@ -21,7 +21,7 @@ public class Meias extends Roupas {
     }
     
     public void setmodelagem(String modelagem){
-        this.modelagem = modelagem;
+        this.modelagem = "De lã";
     }
     
     public String getcor(){
@@ -29,7 +29,11 @@ public class Meias extends Roupas {
     }
     
     public void setcor(String cor){
-        this.cor = cor;
+        this.cor = "Preta";
     }
-    
+      public void exibirDetalhes() {
+        super.exibirDetalhes();
+        System.out.println("A cor da meia é: " + cor);
+        System.out.println("A modelagem é: " + modelagem);
+    }
 }
