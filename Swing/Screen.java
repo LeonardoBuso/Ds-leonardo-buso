@@ -6,19 +6,19 @@ import java.awt.event.ActionListener;
 public class Screen extends JFrame implements ActionListener {
     public Screen() {
 
-        setVisible(true);
-        setSize(800,500);
-        setTitle("Teste");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setResizable(false);
+        setVisible(true); //mostra na tela
+        setSize(800,500); //tamanho da tela
+        setTitle("Teste"); //título da tela
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //ao fechar a tela o código para automaticamente 
+        setResizable(false); //impossibilita a modificação do tamanho da tela
         setLocationRelativeTo(null);
-        setLayout(null);
+        setLayout(null); // anula todos os valores 
 
-        JButton jButton = new JButton("If want yes");
-        jButton.setBounds(100,200,250,70);
-        jButton.setFont(new Font("Arial", Font.PLAIN, 40));
-        jButton.setForeground(new Color(10,10,10));
-        jButton.setBackground(new Color(33, 82, 234));
+        JButton jButton = new JButton("If want yes"); 
+        jButton.setBounds(100,200,250,70); // tamanho
+        jButton.setFont(new Font("Arial", Font.PLAIN, 40)); 
+        jButton.setForeground(new Color(10,10,10)); // letra
+        jButton.setBackground(new Color(33, 82, 234)); //fundo
 
         add(jButton);
 
@@ -27,7 +27,7 @@ public class Screen extends JFrame implements ActionListener {
 
     }
 
-    @Override
+    @Override // a lista de execuções 
     public void actionPerformed(ActionEvent e) {
 
         String marca = JOptionPane.showInputDialog("Entre com a marca do carro:");
