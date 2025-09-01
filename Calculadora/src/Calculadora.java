@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.StringReader;
 import java.util.Arrays;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -30,8 +31,12 @@ public class Calculadora {
     JPanel displayPanel = new JPanel(); // cria o painel (container)
     JPanel buttonsPanel = new JPanel(); // cria os botões dentro do painel
 
+    // A+b, A-B, A*B, A/B
+    String A = "0";
+    String operator = null;
+    String B = null;
+
     Calculadora() {
-        frame.setVisible(true); // mostrar na tela
         frame.setSize(boardWidth, boardHeight); // define quais as variáveis que guardam os tamanhos à serem mostrados
         frame.setLocationRelativeTo(null); // pra acompanhar o mouse sem dar diferença
         frame.setResizable(false); // não permitir mudar o tamanho da tela
@@ -80,14 +85,57 @@ public class Calculadora {
                     JButton button = (JButton) e.getSource();
                     String buttonValue = button.getText();
                     if (Arrays.asList(rightSymbols).contains(buttonValue)) {
+                        if (buttonValue == "=") {
+                            if (A != null) {
+                                B = displayLabel.getText();
+                                double numA = Double.parseDouble(A);
+                                double numB = Double.parseDouble(B);
 
+                                if (operator == "+") {
+                                    displayLabel.setText(removeZeroDecimal(numA+numB));
+                                }
+                                else if (operator == "-") {
+                                    displayLabel.setText(removeZeroDecimal(numA-numB));
+                                }
+                                else if (operator == "x") {
+                                    displayLabel.setText(removeZeroDecimal(numA*numB));
+                                }
+                                else if (operator == "/") {
+                                    displayLabel.setText(removeZeroDecimal(numA/numB));
+                                }
+                                clearAll();
+                            }
+                        }
+                        else if ("+-x/".contains(buttonValue)) {
+                            if (operator == null) {
+                                A = displayLabel.getText();
+                                displayLabel.setText("0");
+                                B = "0";
+                            }
+                            operator = buttonValue;
+                        }
                     }
-                    else if (Arrays.asList(topSymbols).contains(buttonValue)) {
-
+                    else if (Arrays.asList(topSymbols).contains(buttonValue)) { // função responsável de colocar o valor zero assim que clicar o AC
+                        if (buttonValue == "AC") {
+                            clearAll();
+                            displayLabel.setText("0");
+                        }
+                        else if (buttonValue == "+/-") {    // função responsável por mudar o valor do número inserido pra positivo ou negativo ao clicar no +/-
+                            double numDisplay = Double.parseDouble(displayLabel.getText());
+                            numDisplay *= -1;
+                            displayLabel.setText(removeZeroDecimal(numDisplay));
+                        }
+                        else if (buttonValue == "%") {
+                            double numDisplay = Double.parseDouble(displayLabel.getText());
+                            numDisplay /= 100;
+                            displayLabel.setText(removeZeroDecimal(numDisplay));
+                        }
                     }
                     else {
                         if (buttonValue == ".") {
-
+                            if (!displayLabel.getText().contains(buttonValue)) {
+                                displayLabel.setText(displayLabel.getText() + buttonValue);
+                            }
                         }
                         else if ("0123456789".contains(buttonValue)) {
                             if (displayLabel.getText() == "0") {
@@ -100,6 +148,20 @@ public class Calculadora {
                     }
                 }
             });
+            frame.setVisible(true); // mostrar na tela
         }
+    }
+
+    void clearAll() { // função que recebe os valores das Strings definidas no começo do código
+        A = "0";
+        operator = null;
+        B = null;
+    }
+
+    String removeZeroDecimal(double numDisplay) { // função para retirar o zero no final do número, pois é um tipo double
+        if (numDisplay % 1 == 0) {
+            return Integer.toString((int) numDisplay);
+        }
+        return Double.toString(numDisplay);
     }
 }
