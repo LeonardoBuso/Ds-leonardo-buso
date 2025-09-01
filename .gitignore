@@ -15,3 +15,16 @@
 /Conexao/src/conexao/ConectaBanco/dist/
 /Conexao/src/conexao/ConectaBanco/nbproject/private/
 /Conexao/build/
+# Ignorar arquivos compilados
+*.class
+*.jar
+
+# Ignorar pastas de saída
+/bin/
+/out/
+/build/
+
+# Ignorar configurações de IDE
+*.iml
+.idea/
+.vscode/
