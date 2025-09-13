@@ -2,7 +2,7 @@
 Desenvolvimento de Sistemas por Prof João Siles e Davi Villar
 
 Atividades Segundo Semestre
-Pasta Vacina e 
+Pasta Vacina
 Pasta Conexao
 Pasta Calculadora
 
